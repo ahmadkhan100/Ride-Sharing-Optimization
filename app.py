@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from src.github_fetcher import get_repo_data, save_to_file
 from src.route_optimizer import dijkstra, a_star
+from src.data_fetcher import fetch_osm_data, fetch_simulated_ride_sharing_data
 
 app = Flask(__name__)
 
@@ -39,6 +40,20 @@ def optimize_route():
         return jsonify({'error': 'Unsupported algorithm'}), 400
     
     return jsonify({'cost': cost, 'path': path})
+
+@app.route('/fetch_osm_data', methods=['GET'])
+def fetch_osm():
+    bbox = request.args.get('bbox')
+    if bbox:
+        fetch_osm_data(bbox)
+        return jsonify({'message': 'OSM data fetched successfully'}), 200
+    else:
+        return jsonify({'error': 'Bounding box is required'}), 400
+
+@app.route('/fetch_simulated_data', methods=['GET'])
+def fetch_simulated_data():
+    fetch_simulated_ride_sharing_data()
+    return jsonify({'message': 'Simulated ride-sharing data fetched successfully'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
