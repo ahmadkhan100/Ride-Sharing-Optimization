@@ -1,1 +1,13 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.3 (25631 thorn-02.openstreetmap.org)">
+  <bounds minlat="51.2800" minlon="-0.4890" maxlat="51.6860" maxlon="0.2360"/>
+  <node id="1" lat="51.5000" lon="-0.1000"/>
+  <node id="2" lat="51.5000" lon="-0.1010"/>
+  <node id="3" lat="51.5010" lon="-0.1000"/>
+  <way id="1">
+    <nd ref="1"/>
+    <nd ref="2"/>
+    <nd ref="3"/>
+    <tag k="highway" v="residential"/>
+  </way>
+</osm>
