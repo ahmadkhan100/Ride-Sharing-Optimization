@@ -20,11 +20,13 @@ This project aims to develop a scalable optimization engine for a ride-sharing p
    ```bash
    git clone https://github.com/ahmadkhan100/Ride-Sharing-Optimization
    cd ride_sharing_optimizer
+   
 2. Create and activate a virtual environment:
-   ```bash
+  ```bash
   python -m venv venv
   source venv/bin/activate
-3.
+
+3.  Install the dependencies:
 
  
 
