@@ -18,5 +18,5 @@ This project aims to develop a scalable optimization engine for a ride-sharing p
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ride_sharing_optimizer.git
+   git clone https://github.com/ahmadkhan100/Ride-Sharing-Optimization
    cd ride_sharing_optimizer
